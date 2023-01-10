@@ -1,4 +1,6 @@
 name: Android Builder for Java
+description: An GitHub Action for building Android Apps coded in Java using Gradle.
+
 on:
   push:
     branches: [ master ]
