@@ -1,0 +1,22 @@
+name: Android Builder for Java
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: action/checkout@v3.3.0
+      - name: Java Setup
+        uses: actions/setup-java@v3.9.0
+      - name: Build with Gradle
+        run: ./gradlew build
+      - name: Upload APK
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: Compiled APK (result)
+          path: app/build/outputs/apk/debug/app-debug.apk
