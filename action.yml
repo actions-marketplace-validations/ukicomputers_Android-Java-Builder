@@ -1,7 +1,8 @@
 name: Android Builder for Java
 description: An GitHub Action for building Android Apps coded in Java using Gradle.
-branding.icon: briefcase
-branding.color: gray-dark
+branding:
+  icon: briefcase
+  color: gray-dark
 
 on:
   push:
